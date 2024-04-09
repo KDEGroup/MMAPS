@@ -3,7 +3,6 @@ import numpy as np
 import torch.utils.data
 import torch
 from PIL import Image
-import linecache
 import json
 import random
 import torchvision
@@ -13,16 +12,9 @@ try:
     BICUBIC = InterpolationMode.BICUBIC
 except ImportError:
     BICUBIC = Image.BICUBIC
-import pickle
-import cv2
-from skimage import io
 import h5py
 
 import models
-import threadpool
-from multiprocessing import Process, SimpleQueue
-from torch.utils.data import IterableDataset
-import math
 
 def process_input(in_list_str):
     in_list = in_list_str.strip().split()

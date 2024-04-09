@@ -1,9 +1,7 @@
 from __future__ import division
 import collections
 import six
-import sys
 import numpy as np
-import json
 from .rouge import Rouge
 
 from nltk.translate.bleu_score import corpus_bleu, sentence_bleu

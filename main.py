@@ -1,36 +1,20 @@
 import os
-import sys
-import numpy as np
 from numpy import *
 import warnings
-from tqdm import tqdm
 from torch import optim, einsum
 import time
 import datetime
 import torch.nn.functional as F
 import torch.nn as nn
-from collections import OrderedDict
-from transformers import BertTokenizer, AutoConfig
-from transformers.modeling_outputs import ModelOutput
-import copy
+from transformers import BertTokenizer
 import torch
 import argparse
 import json
-import timm
-import cv2
-import torchvision
-from PIL import Image
-import pickle
-import faiss
-import h5py
 
 import utils
 import models
 
 from models.modeling_bart import VLBart
-
-from info_nce import InfoNCE
-from sklearn.metrics import f1_score
 
 
 torch.autograd.set_detect_anomaly(True)
